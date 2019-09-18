@@ -1,0 +1,31 @@
+  
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title class="header-title">Memory Game</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="container">
+  <ion-button class="start-game-btn ion-no-margin" (click)="startGame()">Start game</ion-button>
+  <ion-button class="join-game-btn ion-no-margin"  (click)="joinGame()" >Join game</ion-button>
+
+
+  
+   
+</ion-content>
+<ion-content>
+   
+       
+       
+     
+  
+    <div *ngIf="showAddress" [formGroup]="addressForm">
+        <ion-item class="username-input ion-no-margin"  >
+            <ion-input formControlName="serverAddress" placeholder="Enter server address:" required type="text" color="white" ></ion-input>
+        </ion-item>
+        <button  (click)="saveAddress()" class="serverBtn">Confrim</button>
+    </div>
+    
+
+  
+</ion-content>

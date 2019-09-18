@@ -1,0 +1,31 @@
+
+ <ion-header translucent>
+    <ion-toolbar>
+      <ion-title class="header-title">Choose level</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content >
+  <form [(formGroup)]="gameForm"  (ngSubmit)="onSubmit()">
+      <ion-label color="primary" style="margin-top:10px" ><p class="select-label">Difficulty</p></ion-label>
+      <ion-select value="4" okText="Okay" cancelText="Dismiss" formControlName="selectDiff">
+        <ion-select-option value="4">4x4</ion-select-option>
+        <ion-select-option value="6">6x6</ion-select-option>
+        <ion-select-option value="8">8x8</ion-select-option>
+     
+      </ion-select>
+   
+      <ion-label color="primary" style="margin-top:10px"><p class="select-label">Players</p></ion-label>
+          <ion-select value="2" okText="Okay" cancelText="Dismiss" formControlName="selectPlayer">
+            <ion-select-option value="2">2 players</ion-select-option>
+            <ion-select-option value="3">3 players</ion-select-option>
+            <ion-select-option value="4">4 players</ion-select-option>
+            <ion-select-option value="5">5 players</ion-select-option>
+          </ion-select>
+
+          <div class="ion-padding">
+     
+              <ion-button expand="block" type=submit class="start-game-btn" color="primary">Start game</ion-button>
+           
+            </div>
+  </form>   
+</ion-content>

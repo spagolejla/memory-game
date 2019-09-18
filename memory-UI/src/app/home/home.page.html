@@ -1,0 +1,47 @@
+
+<ion-content>
+ <div class="title">
+  <h1>Memory</h1>
+  <h1> Game</h1>
+ </div>
+   
+<div class="login">
+  <form [formGroup]="loginForm"  (ngSubmit)="toStartPage()">
+      <ion-label class="username-label" >Username</ion-label>
+      <ion-item  class="username-input"> 
+        
+        <ion-input formControlName="username" placeholder="Enter the username" required type="text" color="white" ></ion-input>
+  
+      </ion-item>
+
+      <ion-item *ngIf="!loginForm.controls.username.valid  && (loginForm.controls.username.dirty || submitAttempt)">
+          <p>Please enter a valid username.</p>
+      </ion-item>
+      <ion-item *ngIf="f.username.errors?.required && (loginForm.controls.username.dirty || submitAttempt)">
+          <p>Username is required!</p>
+      </ion-item>
+
+      <div>
+          <ion-item class="username-input ion-no-margin"  >
+              <ion-input formControlName="serverAddress" placeholder="Enter server address:" value="localhost:8080"  type="text" color="white" ></ion-input>
+          </ion-item>
+         
+      </div>
+  
+    <div class="ion-padding">
+     
+      <ion-button expand="block" type=submit class="login-btn" color="light"><p>Login</p></ion-button>
+   
+    </div>
+   
+    
+    
+  </form>
+     
+  </div>
+     
+   
+   
+  
+</ion-content>
+

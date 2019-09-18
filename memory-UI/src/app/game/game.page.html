@@ -1,0 +1,28 @@
+<ion-content>
+    <ion-header translucent>
+        <ion-toolbar>
+          <span class="header-title">Memory Game</span> 
+        </ion-toolbar>
+      </ion-header>
+    <div *ngIf="show" style="margin-top:1%;" >
+        <mat-grid-list cols="{{rows}}" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let c of _gameService.getCards()" (click)='flipCard(c)'><ion-icon *ngIf="!c.hidden" name={{c.icon}}></ion-icon></mat-grid-tile>
+         
+          
+        
+      
+        </mat-grid-list>
+       
+
+      </div>
+      <div *ngIf="show" style="display: inline-block; width:100%">
+          <div class="players">Players:
+              <div class="pl" *ngFor="let pl of _gameService.getGame().users"> {{pl.username}}  | {{pl.points}} pts.  </div>
+              
+             </div>  
+              
+      </div>
+   
+</ion-content>
+
+

@@ -1,0 +1,22 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title class="header-title">Join game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top:10%">
+  <ion-label class="username-label" >Enter the code:</ion-label>
+ <form [formGroup]="joinKeyForm" (ngSubmit)="joinGame()">
+   <ion-item class="item">
+      <ion-input formControlName="code" required type="text"  placeholder="Enter the code" ></ion-input>
+
+   </ion-item>
+  <ion-button expand="block" type="submit" class="login-btn" color="primary">
+    <p>Join Game</p>
+  </ion-button>
+ </form>
+  
+    </div>
+</ion-content>
+

@@ -1,0 +1,35 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title class="header-title">Memory Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid *ngIf="!showKeys"  style="height: 100%" >
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+      <ion-spinner name="circles"></ion-spinner>
+      Generating codes...
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid  >
+    <div style="margin-top:10%">
+      <ion-label class="username-label1">My key:</ion-label>
+      <div  (click)="copyToClipboard(code1)">
+        <p class="label-1">{{code1}}</p>
+      </div>
+      <div class="label-separator ">
+      </div>
+      <ion-label class="username-label2" style="margin-top:10%">Players key:</ion-label>
+  
+    </div>
+    <div *ngFor="let k of code2">
+      <p (click)="copyToClipboard(k)" class="label-1">{{k}}</p>
+    </div>
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="nextPage()" class="login-btn" color="primary">
+        <p>NEXT</p>
+      </ion-button>
+    </div>
+  </ion-grid>
+</ion-content>

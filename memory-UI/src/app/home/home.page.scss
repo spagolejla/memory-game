@@ -1,0 +1,42 @@
+.container{
+    padding: 3%;
+   
+}
+ion-content{
+
+    --ion-background-color: #3498db;
+}
+.title {
+  align-items: center;
+  display: inline-block;
+  padding: 22%;
+}
+.title h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    align-self: center;
+   
+    margin: 0%;
+}
+
+.username-input {
+
+ margin-right: 5%
+   
+}
+
+.username-label {
+    margin-left: 5%;
+    color: white;
+}
+.login {
+    margin-top: 15%
+}
+
+.login-btn{
+ 
+  color: #3498db;
+  font-weight: bolder;
+}
